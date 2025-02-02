@@ -8,7 +8,11 @@ class UserService
 
     // CRUD operations
 
-    // Create a new user
+    /**
+     * Create a new user
+     * @param $req
+     * @return mixed (array|null)
+     */
     function register($req) 
     {
         
@@ -42,6 +46,11 @@ class UserService
         return $user->create($req);
     }
 
+    /**
+     * Login a user
+     * @param $req
+     * @return mixed (array|null)
+     */
     function login($req) 
     {
 

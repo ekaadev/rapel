@@ -4,6 +4,13 @@ require_once __DIR__ . "/../service/UserService.php";
 
 class UserController 
 {
+    /**
+     * Register a new user
+     * @param $req
+     * @return mixed (array|null)
+     * @throws ResponseError
+     * @throws PDOException
+     */
     function register($req)
     {
         $userService = new UserService();
@@ -38,6 +45,13 @@ class UserController
         }
     }
 
+    /**
+     * Login a user
+     * @param $req
+     * @return mixed (array|null)
+     * @throws ResponseError
+     * @throws PDOException
+     */
     function login($req)
     {
         $userService = new UserService();

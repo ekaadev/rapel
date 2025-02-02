@@ -14,7 +14,11 @@ class User
 
     // CRUD operations
 
-    // Create a new user
+    /**
+     * Create a new user
+     * @param $req
+     * @return mixed (array|null)
+     */
     function create($req) 
     {
         // SQL query to insert a new user
@@ -82,14 +86,21 @@ class User
         }
     }
 
-    // Read all users
+    /**
+     * Read all users
+     * @return mixed (array|null)
+     */
     function read() 
     {
         
 
     }
 
-    // Read a user
+    /**
+     * Read a unique user
+     * @param $username
+     * @return mixed (array|null)
+     */
     function readUnique($username) 
     {
         $sql = 
@@ -116,18 +127,29 @@ class User
         }
     }
 
-    // Update a user
+    /**
+     * Update a user
+     * @return mixed (array|null)
+     */
     function update() 
     {
 
     }
 
-    // Delete a user
+    /**
+     * Delete a user
+     * @return mixed (array|null)
+     */
     function delete() 
     {
 
     }
 
+    /**
+     * Count the number of users with the same username
+     * @param $username
+     * @return int
+     */
     function count($username) : int
     {
         $sql = "SELECT COUNT(username) FROM users WHERE username = :username";
